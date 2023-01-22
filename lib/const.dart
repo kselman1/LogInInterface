@@ -10,7 +10,7 @@ const blackText = Color(0xFF1c1c1a);
 const TextFieldDecoration = InputDecoration(
   hintText: 'Enter a value',
   hintStyle: TextStyle(color: greyText),
-  contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+  contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
   enabledBorder: UnderlineInputBorder(
     borderSide: BorderSide(
       width: 1,

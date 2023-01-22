@@ -21,15 +21,32 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          toolbarHeight: 45,
-          title: const Text(
-            'Registracija',
-            style: TextStyle(
-              fontSize: 15,
-              color: blackText,
+        leading: const BackButton(
+          color: greyText,
+        ),
+        toolbarHeight: 45,
+        title: const Text(
+          'Registracija',
+          style: TextStyle(
+            fontSize: 15,
+            color: blackText,
+          ),
+        ),
+        backgroundColor: Colors.white,
+        actions: [
+          TextButton(
+            onPressed: (() =>
+                Navigator.pushNamed(context, RegistrationScreen.id)),
+            child: const Text(
+              'GOTOVO',
+              style: TextStyle(
+                fontSize: 12,
+                color: greyText,
+              ),
             ),
           ),
-          backgroundColor: Colors.white),
+        ],
+      ),
       body: SafeArea(
         child: Container(
           padding: EdgeInsets.all(10),

@@ -31,13 +31,12 @@ class _LoginScreenState extends State<LoginScreen> {
           backgroundColor: Colors.white),
       backgroundColor: backgcolor,
       body: SafeArea(
-        //trebo sam u container i samo edgeinsets
         child: SingleChildScrollView(
-          child: Column(
-            children: [
-              SizedBox(
-                width: 300,
-                child: TextField(
+          child: Container(
+            padding: const EdgeInsets.all(10),
+            child: Column(
+              children: [
+                TextField(
                   keyboardType: TextInputType.emailAddress,
                   style: const TextStyle(color: backgcolor),
                   onChanged: (value) {
@@ -46,13 +45,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   decoration:
                       TextFieldDecoration.copyWith(hintText: 'Korisničko ime'),
                 ),
-              ),
-              const SizedBox(
-                height: 8.0,
-              ),
-              SizedBox(
-                width: 300,
-                child: TextField(
+                const SizedBox(
+                  height: 8.0,
+                ),
+                TextField(
                   obscureText: true,
                   style: const TextStyle(color: backgcolor),
                   onChanged: (value) {
@@ -60,80 +56,80 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                   decoration: TextFieldDecoration.copyWith(hintText: 'Šifra'),
                 ),
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              SocialLoginButton(
-                backgroundColor: blueColor,
-                height: 30,
-                width: 300,
-                text: 'Prijava',
-                borderRadius: 5,
-                fontSize: 12,
-                onPressed: () {},
-                buttonType: SocialLoginButtonType.generalLogin,
-              ),
-              const SizedBox(
-                height: 10.0,
-              ),
-              SizedBox(
-                width: 300,
-                child: Row(children: const [
-                  Expanded(child: Divider()),
-                  CircleAvatar(
-                    backgroundColor: greyColor,
-                    child: Text(
-                      "ili",
-                      style: TextStyle(color: blackText),
+                const SizedBox(
+                  height: 20.0,
+                ),
+                SocialLoginButton(
+                  backgroundColor: blueColor,
+                  height: 30,
+                  width: 300,
+                  text: 'Prijava',
+                  borderRadius: 5,
+                  fontSize: 12,
+                  onPressed: () {},
+                  buttonType: SocialLoginButtonType.generalLogin,
+                ),
+                const SizedBox(
+                  height: 10.0,
+                ),
+                SizedBox(
+                  width: 300,
+                  child: Row(children: const [
+                    Expanded(child: Divider()),
+                    CircleAvatar(
+                      backgroundColor: greyColor,
+                      child: Text(
+                        "ili",
+                        style: TextStyle(color: blackText),
+                      ),
                     ),
-                  ),
-                  Expanded(child: Divider()),
-                ]),
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              SocialLoginButton(
-                backgroundColor: blueColor,
-                height: 30,
-                width: 300,
-                text: 'Facebook prijava',
-                borderRadius: 5,
-                fontSize: 12,
-                onPressed: () {},
-                buttonType: SocialLoginButtonType.facebook,
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              SocialLoginButton(
-                backgroundColor: googleWhite,
-                height: 30,
-                width: 300,
-                text: 'Google prijava',
-                borderRadius: 5,
-                fontSize: 12,
-                onPressed: () {},
-                buttonType: SocialLoginButtonType.google,
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              SocialLoginButton(
-                backgroundColor: greyColor,
-                height: 30,
-                textColor: greyText,
-                width: 300,
-                text: 'Registracija',
-                borderRadius: 5,
-                fontSize: 12,
-                onPressed: () {
-                  Navigator.pushNamed(context, RegistrationScreen.id);
-                },
-                buttonType: SocialLoginButtonType.generalLogin,
-              ),
-            ],
+                    Expanded(child: Divider()),
+                  ]),
+                ),
+                const SizedBox(
+                  height: 20.0,
+                ),
+                SocialLoginButton(
+                  backgroundColor: blueColor,
+                  height: 30,
+                  width: 300,
+                  text: 'Facebook prijava',
+                  borderRadius: 5,
+                  fontSize: 12,
+                  onPressed: () {},
+                  buttonType: SocialLoginButtonType.facebook,
+                ),
+                const SizedBox(
+                  height: 20.0,
+                ),
+                SocialLoginButton(
+                  backgroundColor: googleWhite,
+                  height: 30,
+                  width: 300,
+                  text: 'Google prijava',
+                  borderRadius: 5,
+                  fontSize: 12,
+                  onPressed: () {},
+                  buttonType: SocialLoginButtonType.google,
+                ),
+                const SizedBox(
+                  height: 20.0,
+                ),
+                SocialLoginButton(
+                  backgroundColor: greyColor,
+                  height: 30,
+                  textColor: greyText,
+                  width: 300,
+                  text: 'Registracija',
+                  borderRadius: 5,
+                  fontSize: 12,
+                  onPressed: () {
+                    Navigator.pushNamed(context, RegistrationScreen.id);
+                  },
+                  buttonType: SocialLoginButtonType.generalLogin,
+                ),
+              ],
+            ),
           ),
         ),
       ),
