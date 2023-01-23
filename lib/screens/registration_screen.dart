@@ -54,7 +54,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             child: Column(children: [
               TextField(
                 obscureText: true,
-                style: const TextStyle(color: backgcolor),
+                style: const TextStyle(color: greyText),
                 onChanged: (value) {
                   name = value;
                 },
@@ -66,7 +66,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
               TextField(
                 obscureText: true,
-                style: const TextStyle(color: backgcolor),
+                style: const TextStyle(color: greyText),
                 onChanged: (value) {
                   password1 = value;
                 },
@@ -77,7 +77,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
               TextField(
                 obscureText: true,
-                style: const TextStyle(color: Colors.grey),
+                style: const TextStyle(color: greyText),
                 onChanged: (value) {
                   password2 = value;
                 },
@@ -89,7 +89,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               ),
               TextField(
                 obscureText: true,
-                style: const TextStyle(color: Colors.grey),
+                style: const TextStyle(color: greyText),
                 onChanged: (value) {
                   email = value;
                 },

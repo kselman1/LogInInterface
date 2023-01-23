@@ -38,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 TextField(
                   keyboardType: TextInputType.emailAddress,
-                  style: const TextStyle(color: backgcolor),
+                  style: const TextStyle(color: greyText),
                   onChanged: (value) {
                     email = value;
                   },
@@ -50,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 TextField(
                   obscureText: true,
-                  style: const TextStyle(color: backgcolor),
+                  style: const TextStyle(color: greyText),
                   onChanged: (value) {
                     password = value;
                   },
